@@ -1,0 +1,35 @@
+dravi@kantdravi-LOQ-15ARP9:~$ arr[0]=Ravi
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${arr[0]}
+Ravi
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${#arr[@]}
+1
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${arr[@]}
+Ravi
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${!arr[@]}
+0
+kantdravi@kantdravi-LOQ-15ARP9:~$ unset 'arr[0]'
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${arr[0]}
+
+kantdravi@kantdravi-LOQ-15ARP9:~$ rvi=(1 2 3 3 4 5 )
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${rvi[@]}
+1 2 3 3 4 5
+kantdravi@kantdravi-LOQ-15ARP9:~$ hash['ravi']="jesus"
+bash: 'ravi': syntax error: operand expected (error token is "'ravi'")
+kantdravi@kantdravi-LOQ-15ARP9:~$ hash["ravi"]="jesus"
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${hash[@]}
+jesus
+kantdravi@kantdravi-LOQ-15ARP9:~$ declare -a myfiles
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${#myfiles[@]}
+0
+kantdravi@kantdravi-LOQ-15ARP9:~$ myfiles=`ls`
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${#myfiles[@]}
+1
+kantdravi@kantdravi-LOQ-15ARP9:~$ myfiles=(`ls`)
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${#myfiles[@]}
+35
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${!myfiles[@]}
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34
+kantdravi@kantdravi-LOQ-15ARP9:~$ echo ${myfiles[@]}
+action_repo codespace_assign compressed.zip count_tokens.py Desktop Dockerfile Documents Downloads env invoice-analyzer loop.sh lo.txt Music ngrok-stable-linux-amd64.zip ngrok-v3-stable-linux-amd64.tgz ngrok.yml ollama-deb ollama.deb Pictures promptfooconfig.yaml Public q6.b64 rachna.txt rachna.txt~ README.md request.json script_jina.py sentiment_test.py similarity.py snap Templates test.bashrc text venv Videos
+kantdravi@kantdravi-LOQ-15ARP9:~$ 
+

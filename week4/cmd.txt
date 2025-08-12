@@ -1,0 +1,66 @@
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ nano name.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'ravi' name.txt
+ravi
+ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ cat name.txt | grep 'vi'
+ravi
+ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ cat name.txt | grep 'k.t'
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ cat name.txt | grep 'k.n'
+kant
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ cat name.txt | grep 'k.*t'
+kant
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ nano name.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'f[3-5]'
+^[[A^X^C
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'f[3-5]' name.txt
+21f3002792
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'f[f9]' name.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'f[f3]' name.txt
+21f3002792
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep '2$' name.txt
+21f3002792
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep '\bri\b'
+
+^C
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep '\br' name.txt
+ravi
+ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'r[^1-9]' name.txt
+ravi
+ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'r\{1\)' name.txt
+grep: Unmatched \{
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'r\{1\)}' name.txt
+grep: Unmatched \{
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep 'r\{1\}' name.txt
+ravi
+ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep '\(ra\)' name.txt
+ravi
+ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ nano name.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep '\(ra\).*\1' name.txt
+ravi ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep '\(ravi\).*\1' name.txt
+ravi ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ cat name.txt
+ravi
+kant
+ravi
+21f3002792
+ravi ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ egrep '(ra)+' name.txt
+ravi
+ravi
+ravi ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep -E 'ra|vi' name.txt
+ravi
+ravi
+ravi ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ grep -E 'ra|vi$' name.txt
+ravi
+ravi
+ravi ravi
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week4$ 
+

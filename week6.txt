@@ -1,0 +1,42 @@
+ 1958  find -ctime +30
+ 1959  find -ctime -30
+ 1960  man find
+ 1961  find $HOME -print
+ 1962  find $HOME -print | wc -l
+ 1963  find -1 
+ 1964  find -ctime -1
+ 1965  history
+ 1966  history | tail -100
+ 1967  history | tail -10
+ 1968  man find
+ 1969  man mtime
+ 1970  man find
+ 1971  find . -mtime -3 -print
+ 1972  find /usr -type d -name 'man*' -print
+ 1973  find /usr -type d -name 'man?' -print
+ 1974  find . -size +10M print
+ 1975  find . -size +10M -print
+ 1976  find . -size +10G -print
+ 1977  find . -size +10M -exec ls -lsh {} \;
+ 1978  find . -name '*.jpg' -exec ls -sh {} \;
+ 1979  cp -r /var/log logdata
+ 1980  cd logdata
+ 1981  ls
+ 1982  du -sh
+ 1983  tar -cvf logdata.tar logdata/
+ 1984  cd
+ 1985  tar -cvf logdata.tar logdata/
+ 1986  ls -l
+ 1987  ls -lh
+ 1988  gzip logdata.tar
+ 1989  ls -lh logdata.tar.gz
+ 1990  man gunzip
+ 1991  gunzip -v
+ 1992  uncompress logdata.tar.gz
+ 1993  tar -xvf logdata.tar
+ 1994  ls -lh
+ 1995  man make
+ 1996  more make.file
+ 1997  man make
+ 1998  history | -tail 50
+ 1999  history 

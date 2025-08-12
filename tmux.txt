@@ -1,0 +1,46 @@
+In tmux, you can split your screen into multiple panes (terminals) — either horizontally or vertically — and view them side-by-side or stacked.
+
+Here’s how to view two terminals in tmux:
+✅ 1. Split the tmux window horizontally
+
+(one pane on top, one at bottom)
+
+Ctrl + b, then "
+
+(That’s: hold Ctrl, press b, then release both and press the double quote " key.)
+✅ 2. Split the tmux window vertically
+
+(one pane on the left, one on the right)
+
+Ctrl + b, then %
+
+(Press Ctrl + b, release, then press the percent sign %.)
+🔄 Switch between panes
+
+Use:
+
+Ctrl + b, then arrow keys
+
+(e.g., →, ←, ↑, ↓ to move between panes)
+🔄 Resize panes (optional)
+
+Press:
+
+Ctrl + b, then hold Ctrl and press arrow keys
+
+Some setups require:
+
+Ctrl + b, then :resize-pane -D   # down
+Ctrl + b, then :resize-pane -U   # up
+Ctrl + b, then :resize-pane -L   # left
+Ctrl + b, then :resize-pane -R   # right
+
+❌ Close a pane
+
+In a pane, simply type:
+
+exit
+
+Or press Ctrl + d.
+
+Let me know if you want to view more than two terminals, create named sessions, or save a default layout.

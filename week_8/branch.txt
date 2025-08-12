@@ -1,0 +1,2 @@
+This     is ravi    kant   .
+He is    learning    linux  with passion.

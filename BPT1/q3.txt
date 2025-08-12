@@ -1,0 +1,33 @@
+To solve the problem described in the README.md, you need to create a shell script script.sh that does two things:
+
+    Displays the differences between file1.txt and file2.txt in a unified format.
+
+    Prints the names that are common to both files.
+
+Here’s how you can write script.sh:
+
+#!/bin/bash
+
+# Display the differences in a unified format
+diff -u /opt/assets/file1.txt /opt/assets/file2.txt
+
+# Print the names that are common to both files
+comm -12 <(sort /opt/assets/file1.txt) <(sort /opt/assets/file2.txt)
+
+Explanation:
+
+    diff -u: Shows the difference between files in unified format.
+
+    comm -12: Shows only the lines common to both files.
+
+        comm requires sorted input, so we use <(sort file) to sort both files before comparison.
+
+Steps to make it executable:
+
+chmod +x script.sh
+
+Now you can run it using:
+
+./script.sh
+
+Let me know if you want to redirect the output to a file or add error handling.

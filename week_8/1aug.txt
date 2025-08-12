@@ -1,0 +1,41 @@
+ntdravi-LOQ-15ARP9:~/Downloads$ cd 
+kantdravi@kantdravi-LOQ-15ARP9:~$ ls
+action_repo       Desktop     env               Music                            ollama-deb            Public       README.md          similarity.py  text
+codespace_assign  Dockerfile  invoice-analyzer  ngrok-stable-linux-amd64.zip     ollama.deb            q6.b64       request.json       snap           venv
+compressed.zip    Documents   loop.sh           ngrok-v3-stable-linux-amd64.tgz  Pictures              rachna.txt   script_jina.py     Templates      Videos
+count_tokens.py   Downloads   lo.txt            ngrok.yml                        promptfooconfig.yaml  rachna.txt~  sentiment_test.py  test.bashrc
+kantdravi@kantdravi-LOQ-15ARP9:~$ cd Desktop
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop$ ls
+ APPDEV2   'MLP Project Guideline[May-25].pdf'   sshkey       sshkey.ssh.pub   TDS
+ mlp_proj   Office.odb                           sshkey.ssh   System_Command  'VirtualTA_Project - Copy'
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop$ cd System_Command
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command$ ls
+ BPT1   demo.sh   puneet  'ssh i home kantdravi Desktop.txt'   swati   test.text   text.text   tmux.txt   week2   week4   week5.txt   week_8
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command$ cd week_8
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ nano branch.sed
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ nano branch.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ nano branch.sed
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ sed -f branch.sed branch.txt
+This is ravi kant .
+He is learning linux with passion.
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ man sed
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ nano q.sed
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ cat q.sed
+/BEGIN/,/END/{
+	/^BEGIN$/!{
+		H
+		d
+	}
+	/^BEGIN$/{
+		s/BEGIN//
+		s/END//
+		x
+		:loop
+		N
+		/END/!{
+			s/\/ /
+			b loop
+		}
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ nano q.sed
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week_8$ 
+

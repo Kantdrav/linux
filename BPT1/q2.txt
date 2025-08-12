@@ -1,0 +1,207 @@
+File: /opt/se2001/BPT1_problem_2/README.md
+───────┼────────────────────────────────────────────────────────────────────────
+   1   │ Please use your knowledge of the commands like mkdir, touch, ln e
+       │ tc. to achieve the following directory structure in the current working
+       │  directory by running the commands (not a script).
+   2   │ 
+   3   │ 1. **Create Directories**:
+   4   │     
+   5   │     - Create a base directory called project.
+   6   │     - Within project, create the following subdirectories using brace
+       │  expansion:
+   7   │         - src/{module1,module2}/{include,lib}
+   8   │         - docs/{api,manual}
+   9   │     - Create a directory bin within project.
+  10   │ 
+ChatGPT said:
+
+To achieve the required directory structure using shell commands (not a script), follow these exact commands in your terminal:
+✅ Commands to Run:
+
+mkdir -p project/src/{module1,module2}/{include,lib}
+mkdir -p project/docs/{api,manual}
+mkdir -p project/bin
+
+🧾 Explanation:
+
+    mkdir -p: Creates parent directories as needed without errors.
+
+    project/src/{module1,module2}/{include,lib}:
+
+        Expands to:
+
+            project/src/module1/include
+
+            project/src/module1/lib
+
+            project/src/module2/include
+
+            project/src/module2/lib
+
+    project/docs/{api,manual}:
+
+        Expands to:
+
+            project/docs/api
+
+            project/docs/manual
+
+    project/bin: A standalone directory.
+
+After running these commands, confirm the structure:
+
+tree project
+
+If tree isn't installed, you can use:
+
+find project
+
+Let me know if you need to add files or symbolic links too.
+You said:
+ 2. **Create Files**:
+  13   │     
+  14   │     - Inside src/module1/include, create an empty file named module1
+       │ .h.
+  15   │     - Inside src/module1/lib, create an empty file named module1.so
+       │ .
+  16   │     - Inside src/module2/include, create an empty file named module2
+       │ .h.
+  17   │     - Inside src/module2/lib, create an empty file named module2.so
+       │ .
+ChatGPT said:
+
+To create the specified files after building the directory structure, run the following commands from your current working directory:
+✅ File Creation Commands:
+
+touch project/src/module1/include/module1.h
+touch project/src/module1/lib/module1.so
+touch project/src/module2/include/module2.h
+touch project/src/module2/lib/module2.so
+
+🧾 Explanation:
+
+    touch creates empty files.
+
+    These paths assume you've already created the directories as described in step 1.
+
+You can confirm the file structure using:
+
+find project
+
+Let me know if there's a step 3 for symbolic or hard links — happy to help with that too.
+You said:
+
+  20   │ 3. **Create Hard Links**:
+  21   │     
+  22   │     - Create a hard link to module1.h in the bin directory and name
+       │  it module1_hardlink.h.
+  23   │     - Create a hard link to module2.so in the bin directory and nam
+       │ e it module2_hardlink.so.
+  24   │ 
+ChatGPT said:
+
+To complete step 3 and create the required hard links, run these commands:
+✅ Hard Link Creation Commands:
+
+ln project/src/module1/include/module1.h project/bin/module1_hardlink.h
+ln project/src/module2/lib/module2.so project/bin/module2_hardlink.so
+
+🧾 Explanation:
+
+    ln creates a hard link.
+
+    The links:
+
+        project/bin/module1_hardlink.h → hard link to module1.h
+
+        project/bin/module2_hardlink.so → hard link to module2.so
+
+✅ Verify the links (optional):
+
+ls -li project/src/module1/include/module1.h project/bin/module1_hardlink.h
+ls -li project/src/module2/lib/module2.so project/bin/module2_hardlink.so
+
+If the inode numbers match, the hard links are correctly created.
+
+Let me know if you need to create symbolic links as well — they're different from hard links.
+You said:
+
+  26   │ 4. **Create Soft Links**:
+  27   │     
+  28   │     - Create a soft link to the docs directory in the project direc
+       │ tory and name it documentation.
+  29   │     - Create a soft link to module1.so inside module2/lib directory
+       │  and name it module1_symlink.so.
+  30   │ 
+ChatGPT said:
+
+To create the soft (symbolic) links as requested, run these commands:
+✅ Soft Link Creation Commands:
+
+ln -s ../docs project/documentation
+ln -s ../../module1/lib/module1.so project/src/module2/lib/module1_symlink.so
+
+🧾 Explanation:
+
+    ln -s <target> <link_name> creates a symbolic (soft) link.
+
+    First command:
+
+        Creates project/documentation pointing to project/docs.
+
+    Second command:
+
+        Creates module1_symlink.so inside project/src/module2/lib/ pointing to module1.so in project/src/module1/lib/.
+
+        The relative path ../../module1/lib/module1.so goes:
+
+            from module2/lib up two levels (module2 → src) then into module1/lib/module1.so
+
+✅ Verify symbolic links:
+
+ls -l project/documentation
+ls -l project/src/module2/lib/module1_symlink.so
+
+Let me know if you want these commands combined or explained in more detail!
+You said:
+5. **Modify Permissions**:
+  33   │     
+  34   │     - Set the permission of project directory to 755.
+  35   │     - Set the permission of all directories under project/src to 700
+       │ .
+  36   │     - Set the permission of all .h files to 644.
+  37   │     - Set the permission of all .so files to 755.
+  38   │ 
+ChatGPT said:
+
+Here are the commands to modify the permissions as specified:
+✅ Commands to Modify Permissions
+
+chmod 755 project
+chmod 700 project/src project/src/module1 project/src/module1/include project/src/module1/lib project/src/module2 project/src/module2/include project/src/module2/lib
+chmod 644 project/src/module1/include/*.h project/src/module2/include/*.h
+chmod 755 project/src/module1/lib/*.so project/src/module2/lib/*.so
+
+🧾 Explanation:
+
+    chmod 755 project
+    Sets rwxr-xr-x permissions on the project directory.
+
+    chmod 700 on all directories under project/src
+    (only directories get permission rwx------).
+
+    chmod 644 on all .h files
+    Sets rw-r--r-- (read/write owner, read others).
+
+    chmod 755 on all .so files
+    Sets executable permissions rwxr-xr-x for .so files.
+
+Optional: Use find to set permissions recursively for directories and files under project/src
+
+find project/src -type d -exec chmod 700 {} \;
+find project/src -type f -name "*.h" -exec chmod 644 {} \;
+find project/src -type f -name "*.so" -exec chmod 755 {} \;
+
+This method is cleaner and safer for many nested directories and files.
+
+Let me know if you want me to combine everything into one block or script!

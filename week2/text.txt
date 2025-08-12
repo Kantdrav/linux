@@ -1,0 +1,18 @@
+PREFIX line 1 how is your study goning 
+PREFIX  line 2 do you know that ed is the oldest editor
+PREFIX Sun Jun  8 03:48:44 PM IST 2025
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ ed text.txt
+114
+P
+*%s/\(.*\)/PREFIX \1/
+*,P
+?
+*,p
+PREFIX line 1 how is your study goning 
+PREFIX  line 2 do you know that ed is the oldest editor
+PREFIX Sun Jun  8 03:48:44 PM IST 2025
+*w
+135
+*q
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ 
+

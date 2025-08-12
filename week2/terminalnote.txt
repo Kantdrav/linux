@@ -1,0 +1,60 @@
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ echo "line 1 hello ravi kant" > test.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ echo "line 2 how is your study goning " >> text.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ cat test.txt
+line 1 hello ravi kant
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ cat text.txt
+line 2 how is your study goning 
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ echo " line 2 do you know that ed is the oldest editor" >> text.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ cat text.txt
+line 2 how is your study goning 
+ line 2 do you know that ed is the oldest editor
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ mad ed
+Command 'mad' not found, but there are 17 similar ones.
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ man ed
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ ed text.txt
+82
+q
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ ls -l text.txt
+-rw-rw-r-- 1 kantdravi kantdravi 82 Jun  8 15:21 text.txt
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ ed text.txt
+82
+P
+*1
+line 2 how is your study goning 
+*$
+ line 2 do you know that ed is the oldest editor
+*,p
+line 2 how is your study goning 
+ line 2 do you know that ed is the oldest editor
+*/study
+line 2 how is your study goning 
+*+
+ line 2 do you know that ed is the oldest editor
+*-
+line 2 how is your study goning 
+*%
+ line 2 do you know that ed is the oldest editor
+*%o
+?
+*%p
+line 2 how is your study goning 
+ line 2 do you know that ed is the oldest editor
+*.
+ line 2 do you know that ed is the oldest editor
+*!date
+Sun Jun  8 03:47:26 PM IST 2025
+!
+*!calendar
+sh: 1: calendar: not found
+!
+*r !date
+32
+*,p
+line 2 how is your study goning 
+ line 2 do you know that ed is the oldest editor
+Sun Jun  8 03:48:44 PM IST 2025
+*w
+114
+*q 
+kantdravi@kantdravi-LOQ-15ARP9:~/Desktop/System_Command/week2$ 
+
