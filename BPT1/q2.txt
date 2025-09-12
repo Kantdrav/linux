@@ -75,7 +75,8 @@ To create the specified files after building the directory structure, run the fo
 
 touch project/src/module1/include/module1.h
 touch project/src/module1/lib/module1.so
-touch project/src/module2/include/module2.h
+touch project/src/module2/include/module2
+touch project/src/module2/lib/modu.h
 touch project/src/module2/lib/module2.so
 
 🧾 Explanation:
